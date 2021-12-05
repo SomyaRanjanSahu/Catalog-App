@@ -18,8 +18,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      darkTheme: ThemeData(brightness: Brightness.dark), // for dark theme
-      initialRoute: "/", // to run 'homepage' in the beginning
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      debugShowCheckedModeBanner: false, // for dark theme
+      initialRoute: MyRoutes.homeRoute, // to run 'homepage' in the beginning
       routes: {
         "/": (context) => LoginPage(), // initial route
         MyRoutes.homeRoute: (context) => HomePage(),
