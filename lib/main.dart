@@ -8,9 +8,8 @@ import 'package:velocity_x/velocity_x.dart';
 import 'widgets/themes.dart';
 
 void main() {
-  runApp(VxState(
-    store: MyStore(),
-    child: MyApp())); // runs the widgets of the app
+  runApp(
+      VxState(store: MyStore(), child: MyApp())); // runs the widgets of the app
 }
 
 class MyApp extends StatelessWidget {

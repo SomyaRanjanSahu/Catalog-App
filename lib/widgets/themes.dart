@@ -11,12 +11,22 @@ class MyTheme {
       buttonColor: darkBluishColor,
       accentColor: darkBluishColor,
       appBarTheme: AppBarTheme(
-        color: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        textTheme: Theme.of(context).textTheme,
-        centerTitle: true,
-      ));
+          color: Colors.white,
+          elevation: 0.0,
+          iconTheme: IconThemeData(color: Colors.black),
+          centerTitle: true,
+          toolbarTextStyle: Theme.of(context)
+              .textTheme
+              .copyWith(
+                  headline6: context.textTheme.headline6!
+                      .copyWith(color: Colors.black))
+              .bodyText2,
+          titleTextStyle: Theme.of(context)
+              .textTheme
+              .copyWith(
+                  headline6: context.textTheme.headline6!
+                      .copyWith(color: Colors.black))
+              .headline6));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       brightness: Brightness.dark,
@@ -29,10 +39,19 @@ class MyTheme {
         color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
-        textTheme: Theme.of(context).textTheme.copyWith(
-            headline6:
-                context.textTheme.headline6!.copyWith(color: Colors.white)),
         centerTitle: true,
+        toolbarTextStyle: Theme.of(context)
+            .textTheme
+            .copyWith(
+                headline6:
+                    context.textTheme.headline6!.copyWith(color: Colors.white))
+            .bodyText2,
+        titleTextStyle: Theme.of(context)
+            .textTheme
+            .copyWith(
+                headline6:
+                    context.textTheme.headline6!.copyWith(color: Colors.white))
+            .headline6,
       ));
 
   // Colors
